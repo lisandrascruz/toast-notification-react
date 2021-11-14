@@ -1,0 +1,36 @@
+.notification-container {
+  color: #fff;
+  position: fixed;
+  z-index: 999999;
+  bottom: 12px;
+  right: 12px;
+}
+
+.notification {
+  /* pointer-events: auto; */
+  margin-bottom: 15px;
+  border-radius: 2px;
+  width: 280px;
+  border-radius: 2px;
+  padding: 12px;
+}
+
+.notification-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.notification-image img {
+  width: 30px;
+  height: 30px;
+}
+
+.notification-container button {
+  float: right;
+  color: #fff;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
