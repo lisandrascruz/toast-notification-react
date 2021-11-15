@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import checkIcon from "../../assets/check.svg";
+import errorIcon from "../../assets/error.svg";
 import "./style.css";
 
 const Toast = (props) => {
@@ -37,11 +39,17 @@ const Toast = (props) => {
         <div
           key={i}
           className={`notification`}
-          style={{ backgroundColor: toast.backgroundColor }}
+          style={{
+            backgroundColor:
+              toast.title === "Success!!" ? "#5cb85c" : "#d9534f",
+          }}
         >
           <button onClick={() => deleteToast(toast.id)}>X</button>
           <div className="notification-image">
-            <img src={toast.icon} alt="" />
+            <img
+              src={toast.title === "Success!!" ? checkIcon : errorIcon}
+              alt=""
+            />
           </div>
           <div>
             <p className="notification-title">{toast.title}</p>
